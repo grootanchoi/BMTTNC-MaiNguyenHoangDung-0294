@@ -1,20 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thực hành An toàn thông tin nâng cao</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/
-bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        .main-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .logo-img {
+            display: block;
+            margin: 0 auto 25px auto;
+            max-width: 220px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+        .main-title {
+            font-weight: 800;
+            color: #1e3d59;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+        .main-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ff6e40;
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+        /* Style cho danh sách các thuật toán */
+        .cipher-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .cipher-item a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            background: #f8f9fa;
+            color: #1e3d59;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        .cipher-item a:hover {
+            background: #1e3d59;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(30, 61, 89, 0.2);
+            transform: translateY(-3px);
+        }
+        .cipher-item a i {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            transition: transform 0.3s ease;
+        }
+        .cipher-item a:hover i {
+            transform: translateX(5px);
+            opacity: 1;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="https://file1.hutech.edu.vn/file/editor/homepage/stories/
-hinh34/logo%20CMYK-01.png" alt="hutech" style="display: block;
-margin-left: auto; margin-right: auto; width: 30%;">
-        <h4 style="font-weight: bold; text-align: center;">BÀI THỰC HÀNH
-BẢO MẬT THÔNG TIN NÂNG CAO</h4>
-        <ul style="margin-top: 30px;">
-            <li><a href="/caesar">Ceasar Cipher</a></li>
-            <li><a href="/rsa">RSA Cipher</a></li>
-        </ul>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                
+                <div class="main-card">
+                    <img src="https://file1.hutech.edu.vn/file/editor/homepage/stories/hinh34/logo%20CMYK-01.png" alt="hutech" class="logo-img">
+                    
+                    <h3 class="text-center main-title">Bài Thực Hành Bảo Mật Thông Tin Nâng Cao</h3>
+                    
+                    <ul class="cipher-list">
+                        <li class="cipher-item">
+                            <a href="/caesar">
+                                <span><i class="fas fa-key mr-2"></i> Caesar Cipher</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="cipher-item">
+                            <a href="/playfair">
+                                <span><i class="fas fa-th mr-2"></i> Playfair Cipher</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="cipher-item">
+                            <a href="/railfence">
+                                <span><i class="fas fa-code-branch mr-2"></i> Rail Fence Cipher</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="cipher-item">
+                            <a href="/transposition">
+                                <span><i class="fas fa-exchange-alt mr-2"></i> Transposition</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="cipher-item">
+                            <a href="/vigenere">
+                                <span><i class="fas fa-font mr-2"></i> Vigenère Cipher</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <footer>
+                    <p>&copy; 2026 - Khoa Công nghệ thông tin - HUTECH</p>
+                </footer>
+
+            </div>
+        </div>
     </div>
-</body></html>
+
+</body>
+</html>
